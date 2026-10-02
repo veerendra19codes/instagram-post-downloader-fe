@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 
 interface MediaItem {
@@ -219,6 +220,7 @@ function App() {
         <span>FRAME <span className="wordmark-period">.</span></span>
         <span>Only download media you have permission to use.</span>
       </footer>
+      <Analytics />
     </main>
   )
 }
