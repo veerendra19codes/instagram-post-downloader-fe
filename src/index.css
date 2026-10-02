@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Outfit', 'DM Sans', sans-serif;
+  color: #29232d;
+  background: #fffafd;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+
+  --ink: #29232d;
+  --muted: #776d7b;
+  --paper: #fffafd;
+  --line: #eadfe8;
+  --accent: #c13584;
+  --ig-pink: #e1306c;
+  --ig-purple: #833ab4;
+  --ig-gradient: linear-gradient(45deg, #feda75 0%, #fa7e1e 28%, #d62976 62%, #962fbf 82%, #4f5bd5 100%);
+  --mono: 'DM Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--paper);
+  background-image: radial-gradient(#e9dce7 0.7px, transparent 0.7px);
+  background-size: 20px 20px;
+}
+
+button, input { font: inherit; }
+button { color: inherit; }
+::selection { color: var(--ink); background: var(--acid); }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
