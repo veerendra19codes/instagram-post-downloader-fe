@@ -151,8 +151,8 @@ function App() {
       <section className="workspace" aria-labelledby="page-title">
         <div className="intro">
           <p className="eyebrow"><span>01</span> &nbsp; PASTE A POST</p>
-          <h1 id="page-title">Keep the<br /><em>whole</em> moment.</h1>
-          <p className="intro-copy">One link, every frame. Paste a public Instagram post and save its photos or videos, one by one.</p>
+          <h1 id="page-title">Instagram<br /><em>downloader.</em></h1>
+          <p className="intro-copy">Download photos and videos from public Instagram posts, reels, and carousels. Paste a link to preview each item and save media you have permission to use.</p>
         </div>
 
         <form className="link-form" onSubmit={handleSubmit}>
@@ -166,6 +166,12 @@ function App() {
               placeholder="https://www.instagram.com/p/..."
               value={postUrl}
               onChange={(event) => setPostUrl(event.target.value)}
+              onKeyDown={(event) => {
+                if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'a') {
+                  event.preventDefault()
+                  event.currentTarget.select()
+                }
+              }}
               aria-describedby={error ? 'form-message' : 'form-hint'}
             />
             <button type="submit" disabled={isLoading || !postUrl.trim()}>
@@ -214,6 +220,25 @@ function App() {
             <p>Paste a link above to see every photo and video in the post.</p>
           </div>
         )}
+      </section>
+
+      <section className="seo-content" aria-labelledby="downloader-info-title">
+        <h2 id="downloader-info-title">Instagram post, photo, and video downloader</h2>
+        <p>
+          Frame is an online Instagram downloader for viewing and saving photos and videos from public posts.
+          Paste a post, reel, or carousel link to find its available media in one place, then download the
+          items you are authorized to use.
+        </p>
+        <h3>How do I download media from an Instagram post?</h3>
+        <p>
+          Copy the link to a public Instagram post and paste it into the field above. Choose Get media to
+          preview the available photos or videos, then select Download on the item you want to save.
+        </p>
+        <h3>Can I download private posts?</h3>
+        <p>
+          No. This tool only works with public posts that Instagram makes accessible. It cannot access
+          private accounts or bypass sign-in restrictions. Only save content when you have permission.
+        </p>
       </section>
 
       <footer className="footer">

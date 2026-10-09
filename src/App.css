@@ -90,6 +90,7 @@
 .input-row:focus-within { border-color: var(--ig-pink); box-shadow: 4px 4px 0 #f9d6e5; }
 .input-row input { min-width: 0; flex: 1; padding: 0 12px; border: 0; outline: none; color: var(--ink); font-size: 14px; background: transparent; }
 .input-row input::placeholder { color: #998f9a; }
+.input-row input::selection { color: white; background: var(--ig-pink); }
 
 .input-row button {
   display: inline-flex;
@@ -133,6 +134,12 @@
 
 .empty-mark { color: var(--ig-pink); font-family: 'DM Sans', sans-serif; font-size: 39px; line-height: 1; }
 .empty-state p { margin: 0; font-size: 14px; }
+
+.seo-content { max-width: 760px; padding: 8px 0 48px; color: var(--muted); line-height: 1.7; }
+.seo-content h2, .seo-content h3 { color: var(--ink); line-height: 1.3; }
+.seo-content h2 { margin: 0 0 14px; font-size: 24px; }
+.seo-content h3 { margin: 26px 0 8px; font-size: 17px; }
+.seo-content p { margin: 0; }
 
 .media-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
 .media-item { min-width: 0; border-bottom: 1px solid var(--line); animation: arrive 300ms ease both; }
